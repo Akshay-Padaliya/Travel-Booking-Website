@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    /* 1rem = 16px
+    1rem = 10px for easy to convert
+    font size = 10px but size was fixed not change user
+    100% / 16== 6.25%; 
+    6.25 *10 =62.5% */
+
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins';
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.container {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondry-color: #000000;
+}
+
+.common-btn {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1.6rem 2.5rem;
+    border-radius: 3rem;
+    background: #000;
+
+
+}
+
+.main-title {
+    color: #020202;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 7rem;
+    /* margin-top: 15rem; */
+    margin-bottom: 2.8rem;
+
+}
+
+.sub-title {
+    color: #878787;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.6rem;
+    padding-bottom: 8rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+/******** Header ********/
+header {
+    /* background-color: #C4C4C4; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5.2rem;
+    z-index: 4;
+    /* backdrop-filter: blur(50px); */
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav>i {
+    margin-right: 2rem;
+}
+
+
+header .container nav ul li {
+    display: inline-block;
+    margin-right: 6.6rem;
+}
+
+header nav ul li a {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0px 0px 5px black;
+}
+
+header nav ul li a:hover,
+header nav ul li a i:hover {
+    font-size: 2rem;
+    color: rgb(0, 182, 206);
+    transition: all 0.5s;
+}
+
+header i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-shadow: 0px 0px 5px black;
+}
+
+.container nav>i,
+#menu>i {
+    display: none;
+}
+
+
+
+
+/*************************/
+
+/******Hero section ********/
+
+#hero {
+    background-image: url(../images/travel-bali.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    /* z-index: -1; */
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.652);
+    z-index: 1;
+
+
+}
+
+.hero-data {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 35.2rem 0;
+    position: relative;
+    z-index: 2;
+
+}
+
+.hero-data h1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 12rem;
+    color: var(--primary-color);
+    margin-bottom: 1.6rem;
+}
+
+.hero-data p {
+
+    color: #CFCFCF;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 7rem;
+    max-width: 46.3rem;
+    margin: 0 auto;
+}
+
+/****************************/
+
+/***************Packages******/
+#packages {
+    padding: 17.8rem 0;
+}
+
+/* #packages .pkg-title {
+    max-width: 75rem;
+    margin: 0 auto; */
+/* padding-bottom: 6rem; */
+/* } */
+.Popular {
+    justify-content: space-between;
+}
+
+.popular-pkg h2 {
+    padding-bottom: 1.4rem;
+}
+
+#packages .popular-pkg p {
+    max-width: 57rem;
+}
+
+.Popular .btn .common-btn {
+    margin-top: 10rem;
+    /* display: inline-block; */
+    float: right;
+}
+
+#packages .popular-location {
+    justify-content: space-between;
+    row-gap: 2.8rem;
+}
+
+.popular-location .col-4:nth-child(1),
+.popular-location .col-4:nth-child(4) {
+    padding: 0 1rem 0 0;
+}
+
+.popular-location .col-4:nth-child(2),
+.popular-location .col-4:nth-child(5) {
+    padding: 0 1rem 0 1rem;
+}
+
+.popular-location .col-4:nth-child(3),
+.popular-location .col-4:nth-child(6) {
+    padding: 0 0 0 1rem;
+}
+
+.popular-location .location {
+    border-radius: 1.0rem;
+    box-shadow: 0px 05px 20px 0px rgba(0, 0, 0, 0.317);
+}
+
+.location .image {
+    width: 100%;
+}
+
+.location .image img {
+    width: 100%;
+    height: 32rem;
+    border-radius: 1.0rem 1.0rem 0 0;
+    object-fit: cover;
+}
+
+.location .location-data {
+    width: 100%;
+    padding: 3.4rem 3rem 3rem 2.5rem;
+}
+
+.location-data .name-prs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+}
+
+.location-data .name-prs h4 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.location-data .name-prs p {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.location-data .name-prs span {
+    font-weight: 300;
+}
+
+
+.location-data .discription p {
+    color: #555;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.7rem;
+    margin-bottom: 3rem;
+}
+
+.location-data .str-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+/****************************/
+
+/*********blog-section**********/
+
+#blog {
+    padding-bottom: 17.8rem;
+}
+
+#blog .container p {
+    padding-bottom: 8rem;
+}
+
+.blog-data .left-blog {
+    padding-right: 5.8rem;
+    row-gap: 5.8rem;
+}
+
+.blog-data .right-blog,
+.blog-data .blog-disc {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.blog-data .right-blog img {
+    width: 100%;
+    max-height: 68rem;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.blog-disc {
+    padding: 1.2rem 1.8rem 4.2rem 2.6rem;
+    border-radius: 1rem;
+
+}
+
+.blog-disc span {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 7.0rem;
+}
+
+.blog-disc h4 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 5.1rem;
+}
+
+.blog-disc p {
+    color: #343434;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3.3rem;
+}
+
+/****************************/
+
+/**********Subcribe***********/
+
+#subcribe {
+    background-image: url(../images/travel.avif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+    justify-content: center;
+    padding-top: 11.7rem;
+}
+
+#subcribe::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.49);
+}
+
+#subcribe .container {
+    z-index: 1;
+}
+
+#subcribe .container h2 {
+    color: #FFF;
+    line-height: 7.0rem;
+
+}
+
+#subcribe .container p {
+    color: #DFDFDF;
+    font-weight: 500;
+    line-height: 3.4rem;
+}
+
+.email {
+
+    margin: 1.2rem auto 15rem auto;
+    background-color: white;
+    max-width: 73rem;
+    border-radius: 5.0rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 2.5rem;
+    z-index: -1;
+}
+
+.email input {
+    border-radius: 5.0rem;
+    color: #9B9B9B;
+    font-size: 2.0rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+    border: none;
+    z-index: 3;
+}
+
+/**************************/
+
+/*************footer*******/
+
+footer .container {
+    padding: 11rem 0;
+}
+
+footer .container .row {
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+
+footer .container .row .logo {
+    display: flex;
+}
+
+footer .container .row .logo-data {
+    padding-right: 2.5rem;
+    max-width: 45rem;
+}
+
+footer .container .row .logo-data img {
+    object-fit: contain;
+    margin-right: 1.4rem;
+    width: 7rem;
+}
+
+footer .container .row .logo-data h2 {
+    font-size: 5.5rem;
+}
+
+footer .container .row .logo-data p {
+    color: #6C6C6C;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+
+footer .container .row h4 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 7.0rem;
+}
+
+/* footer .container .row .information {
+    padding-left: 3.5rem;
+} */
+
+footer .container .row .information a {
+    color: #6C6C6C;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+}
+
+footer .container .row .information span {
+    color: #000;
+    margin-right: 1rem;
+}
+
+footer .container .row .quick-link a {
+    display: block;
+    color: #6C6C6C;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+}
+
+footer .container .row .follow-us ul li {
+    display: inline;
+}
+
+footer .container .row .follow-us a {
+    color: #090909;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+    margin-right: 2rem;
+}
+
+.footer-data .information ul li a:hover,
+.footer-data .quick-link ul li a:hover {
+    font-weight: 700;
+    color: #069ABA;
+    text-decoration: underline;
+}
+
+.footer-data .follow-us .fa-facebook:hover {
+    font-size: 2.8rem;
+    transition: all 0.3s;
+    color: rgb(8, 102, 255);
+}
+
+.footer-data .follow-us .fa-twitter:hover {
+    font-size: 2.8rem;
+    transition: all 0.3s;
+    color: rgb(29, 161, 242);
+}
+
+.footer-data .follow-us .fa-youtube:hover,
+.fa-location-dot:hover {
+    font-size: 2.8rem;
+    transition: all 0.3s;
+    color: rgb(255, 0, 0);
+}
+
+.footer-data .follow-us .fa-instagram:hover {
+    font-size: 2.8rem;
+    transition: all 0.3s;
+    color: rgb(215, 64, 127);
+}
+
+.fa-envelope:hover {
+    color: rgb(168, 168, 0);
+}
+
+.copyright {
+    width: 100%;
+    height: 8.0rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright p {
+    color: #DFDFDF;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+}
+
+
+
+
+/*************************/
+
+
+/* ============ End ============ */
+
+
+
+/* ====================== destination - css ========= */
+
+
+#top-dest {
+    padding: 13.9rem 0;
+    background-image: url(../images/travel-bali.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+#top-dest::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.476);
+    z-index: 0;
+}
+
+#top-dest .destination {
+    /* display: grid;
+    justify-content: center; */
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+
+#top-dest .destination h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 7rem;
+    max-width: 88rem;
+    margin: 0 auto 5.2rem auto;
+}
+
+#top-dest .destination h2~a {
+    background-color: white;
+    color: #000;
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 2.2rem;
+    padding: 2rem 5rem;
+    border-radius: 5rem;
+}
+
+#top-dest .destination a~a {
+    background-color: #000;
+    color: white
+}
+
+/* <!-- ======================= --> */
+
+/* <!-- =============Client========== --> */
+
+#client {
+    padding-top: 17.8rem;
+
+}
+
+.client-title {
+    padding-bottom: 4.2rem;
+}
+
+.client-title h4 {
+    color: #626262;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 4.2px;
+}
+
+.client-title h2 {
+    text-align: start;
+    margin: 0 0 2rem 0;
+}
+
+.client-title p {
+    text-align: start;
+    max-width: 44.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    max-width: 100%;
+    /* height: 300px; */
+    
+
+}
+
+.dest-swiper .swiper-wrapper {
+    padding: 10rem 0 0rem 0;
+    overflow: visible;
+}
+
+.dest-swiper .swiper-wrapper .swiper-slide {
+    max-width: 39.9rem;
+    margin: 0 2rem;
+}
+
+.dest-swiper .swiper-button-prev,
+.dest-swiper .swiper-button-next {
+    top: 2.5rem;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.10);
+    width: 6.81rem;
+    height: 6.55rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+}
+
+.dest-swiper .swiper-button-prev {
+    /* display: inline-block; */
+    left: 83%;
+    /* left: var(--swiper-navigation-sides-offset,80%); */
+}
+
+
+.dest-swiper .swiper-button-prev::after,
+.dest-swiper .swiper-button-next::after {
+    font-size: 2.0rem;
+    color: var(--secondry-color);
+
+}
+
+.dest-swiper .dest-slide {
+    margin: 13.7rem 1rem 0 1rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 40rem;
+    padding-bottom: 17.8rem;
+
+}
+
+.dest-swiper .dest-slide>img {
+    width: 13.5rem;
+    height: 13.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 6.2rem;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.dest-swiper .dest-slide .dest-sld-data {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.10);
+    padding: 8.3rem 5rem 5rem 5rem;
+}
+
+.dest-swiper .dest-slide .dest-sld-data h4 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    /* line-height: 70px; */
+    padding-bottom: 0;
+}
+
+.dest-slide .dest-sld-data h4~p {
+    text-align: center;
+    margin-top: 0rem;
+    padding-top: 0;
+}
+
+.dest-slide .dest-sld-data p {
+    color: #858585;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.dest-slide .dest-sld-data .star {
+    margin-top: 7.7rem;
+}
+
+.dest-slide .dest-sld-data .star p {
+    margin-top: 1.8rem;
+}
